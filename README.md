@@ -38,7 +38,7 @@ export DBT_HIVE_HTTP_PATH=jdbc:hive2://hs2-cdw-vhol.dw-cdw1-aw-env.a465-9q4k.clo
 ```
 The DBT_HIVE_HOST and DBT_HIVE_HTTP_PATH copy from your CDW Hive virtual warehouse
 
-![](IMAGES/image002.png)
+![](images/image002.png)
 
 set the environment variables
 ```
