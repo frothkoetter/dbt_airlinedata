@@ -23,8 +23,10 @@ pip install dbt-hive==1.3.1
 ### Configure connection to cdw
 
 create a file setenv.sh
-
+```
 % vi setenv.sh
+```
+copy and past into file and adjust the environment variables
 
 ```
 export DBT_HIVE_SCHEMA=dbt_airlinedata
@@ -34,17 +36,24 @@ export DBT_HIVE_HOST=hs2-cdw-vhol.dw-cdw1-aw-env.a465-9q4k.cloudera.site
 export DBT_HIVE_PORT=443
 export DBT_HIVE_HTTP_PATH=jdbc:hive2://hs2-cdw-vhol.dw-cdw1-aw-env.a465-9q4k.cloudera.site/default;transportMode=http;httpPath=cliservice;socketTimeout=60;ssl=true;auth=browser;
 ```
+The DBT_HIVE_HOST and DBT_HIVE_HTTP_PATH copy from your CDW Hive virtual warehouse
 
+![](IMAGES/image002.png)
+
+set the environment variables
+```
 chmod 700 setenv.sh
 source setenv.sh
-
+```
 
 ### check installation
 
 ```
 % dbt debug
 ```
+Expected output
 
+```
 17:20:35  Running with dbt=1.3.0
 dbt version: 1.3.0
 python version: 3.9.12
@@ -67,7 +76,7 @@ Connection:
   Connection test: [OK connection ok]
 
 All checks passed!
-
+```
 
 ### run a single model
 
