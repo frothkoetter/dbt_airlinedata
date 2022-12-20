@@ -84,11 +84,12 @@ Connection:
 
 All checks passed!
 ```
+
 # Prepare CDW Virtual warehouse
 
 Go to HUE and create a datebase
 
-```
+```SQL
 create database dbt_airlinedata;
 ```
 
@@ -131,17 +132,18 @@ CREATE external TABLE unique_tickets_csv (ticketnumber BIGINT, leg1flightnum BIG
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
 STORED AS TEXTFILE LOCATION '/airlinedata-csv/unique_tickets'
 tblproperties("skip.header.line.count"="1");
-```SQL
+```
 
 Check that tables created and accessing the files in S3
 
 ```SQL
 select * from airlines_csv;
-```SQL
+```
 
 Expected Output
 
 ![](images/image003.png)
+
 
 ### Run a single model
 
