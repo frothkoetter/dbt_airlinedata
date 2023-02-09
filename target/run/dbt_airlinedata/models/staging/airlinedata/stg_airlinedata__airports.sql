@@ -15,5 +15,5 @@
 
 select
   *
-from dbt_airlinedata.airports_csv;
+from airlinedata.airports_csv;
   

@@ -16,6 +16,7 @@
 #  */
 #}
 
+
 select
   *
 from {{ source('raw_airlinedata','flights_csv') }};

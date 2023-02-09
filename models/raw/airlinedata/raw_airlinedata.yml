@@ -18,7 +18,7 @@ version: 2
 
 sources:
   - name: raw_airlinedata
-    schema: dbt_airlinedata
+    schema: airlinedata
     tables:
       - name: flights_csv
         columns:
@@ -27,7 +27,7 @@ sources:
            - not_null
            - dbt_utils.accepted_range:
               min_value: 1995
-              max_value: 2022
+              max_value: 2023
 
       - name: airlines_csv
         columns:
@@ -50,3 +50,5 @@ sources:
       - name: planes_csv
 
       - name: unique_tickets_csv
+
+      - name: flights_prediction_ice

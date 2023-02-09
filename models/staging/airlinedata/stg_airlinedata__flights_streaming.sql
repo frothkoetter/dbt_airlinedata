@@ -15,7 +15,12 @@
 #  * limitations under the License.
 #  */
 #}
+{{
+   config(
+      materialized='view'
+   )
+}}
 
 select
   *
-from {{ source('raw_airlinedata','unique_tickets_csv') }}
+from {{ source('raw_airlinedata','flights_prediction_ice') }};

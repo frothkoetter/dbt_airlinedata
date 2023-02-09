@@ -24,4 +24,5 @@ max( case when rank = 2 then departing_airline end ) as two,
 max(case when rank = 3 then departing_airline end) as three
 from airlines_ranked
 where rank <= 3
-group by airport
+group by
+ airport

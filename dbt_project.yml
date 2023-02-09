@@ -32,12 +32,6 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
-
-seeds:
-  dbt_hive_demo:
-    reference:
-      +schema: reference
-
 models:
   dbt_airlinedata:
     +materialized: table
