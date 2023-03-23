@@ -23,4 +23,4 @@
 
 select
   *
-from {{ source('raw_airlinedata','flights_prediction_ice') }};
+from {{ source('raw_airlinedata','flights_streaming_ice') }};

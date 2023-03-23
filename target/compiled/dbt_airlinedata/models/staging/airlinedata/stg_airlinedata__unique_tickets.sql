@@ -2,4 +2,4 @@
 
 select
   *
-from airlinedata.unique_tickets_csv
+from dbt_airlinedata.unique_tickets_csv

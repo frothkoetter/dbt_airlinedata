@@ -1,5 +1,6 @@
 
 
+
 select
   *
-from airlinedata.flights_csv;
+from dbt_airlinedata.flights_csv;

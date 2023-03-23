@@ -18,7 +18,7 @@ version: 2
 
 sources:
   - name: raw_airlinedata
-    schema: airlinedata
+    schema: dbt_airlinedata
     tables:
       - name: flights_csv
         columns:
@@ -51,4 +51,4 @@ sources:
 
       - name: unique_tickets_csv
 
-      - name: flights_prediction_ice
+      - name: flights_streaming_ice

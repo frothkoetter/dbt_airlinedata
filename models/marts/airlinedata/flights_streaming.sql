@@ -60,7 +60,7 @@ with flights as(
     cast(carrierdelay as int) as carrierdelay,
     cast(weatherdelay as int) as weatherdelay,
     cast(nasdelay as int) as nasdelay,
-    cast(securitydelay as int) as secuirtiydely,
+    cast(securitydelay as int) as securitydelay,
     cast(lateaircraftdelay as int) as lateaircraftdelay,
     origin_lon,
     origin_lat,
@@ -75,7 +75,7 @@ with flights as(
     cast( translate( substr( weather_json, instr(weather_json,'humidity=')+9,2 ),',','') as float) as  humidity,
     cast( translate( substr( weather_json, instr(weather_json,'speed=')+6,5 ),',','') as float) as  wind_speed,
     cast( translate( substr( weather_json, instr(weather_json,'all=')+4,3 ),'}','') as float) as clouds
- from {{ source('raw_airlinedata','flights_prediction_ice') }}
+ from {{ source('raw_airlinedata','flights_streaming_ice') }}
 )
 select
 *

@@ -2,4 +2,4 @@
 
 select
   *
-from airlinedata.planes_csv;
+from dbt_airlinedata.planes_csv;

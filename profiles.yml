@@ -11,4 +11,5 @@ dbt_airlinedata:
       host: "{{ env_var('DBT_HIVE_HOST') }}"
       port: "{{ env_var('DBT_HIVE_PORT') | as_number}}"
       http_path: "{{ env_var('DBT_HIVE_HTTP_PATH') }}"
+      threads: 2
   target: dev_hive
